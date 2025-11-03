@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard - CityCare Hospital</title>
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <h1 class="logo">CityCare Hospital</h1>
+            <ul class="nav-links">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../about/about.html">About</a></li>
+                <li><a href="../../doctor/doctor.html">Doctors</a></li>
+                <li><a href="../../services/services.html">Services</a></li>
+                <li><a href="../../pharmacy/pharmacy.html">Pharmacy</a></li>
+                <li><a href="../../contact/contact.html">Contact</a></li>
+                <li><a href="#" onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="dashboard" class="dashboard-section">
+        <div class="container">
+            <h1>Welcome to Your Dashboard</h1>
+            <p id="welcomeMessage">Manage your appointments and health records.</p>
+
+            <div class="dashboard-content">
+                <div class="dashboard-card">
+                    <h2>Quick Actions</h2>
+                    <div class="actions">
+                        <a href="../appointment/appointment.html" class="action-btn">Book New Appointment</a>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <h2>Your Upcoming Appointments</h2>
+                    <div id="upcomingAppointments"></div>
+                </div>
+
+                <div class="dashboard-card">
+                    <h2>Appointment History</h2>
+                    <div id="appointmentHistory"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>&copy; 2025 CityCare Hospital. All Rights Reserved.</p>
+        <p>Contact: +91 98765 43210 | citycarehospital2025@gmail.com</p>
+        <p>Address: 123 Health Street, Chennai, Tamilnadu 600028</p>
+    </footer>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

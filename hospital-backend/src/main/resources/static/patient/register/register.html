@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Registration - CityCare Hospital</title>
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <h1 class="logo">CityCare Hospital</h1>
+            <ul class="nav-links">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../about/about.html">About</a></li>
+                <li><a href="../../doctor/doctor.html">Doctors</a></li>
+                <li><a href="../../services/services.html">Services</a></li>
+                <li><a href="../../pharmacy/pharmacy.html">Pharmacy</a></li>
+                <li><a href="../../contact/contact.html">Contact</a></li>
+                <li><a href="../login/login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="register" class="register-section">
+        <div class="container">
+            <div class="register-form">
+                <h1>Patient Registration</h1>
+                <p>Join CityCare Hospital to access our services and manage your health records.</p>
+
+                <form id="registerForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" required placeholder="Enter your first name">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" required placeholder="Enter your last name">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dateOfBirth">Date of Birth</label>
+                        <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <textarea id="address" name="address" rows="3" required placeholder="Enter your address"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required placeholder="Create a password">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Confirm your password">
+                    </div>
+
+                    <button type="submit" class="register-btn">Register</button>
+                </form>
+
+                <div class="form-footer">
+                    <p>Already have an account? <a href="../login/login.html">Login here</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 CityCare Hospital. All Rights Reserved.</p>
+        <p>Contact: +91 98765 43210 | citycarehospital2025@gmail.com</p>
+        <p>Address: 123 Health Street, Chennai, Tamilnadu 600028</p>
+    </footer>
+
+    <script src="register.js"></script>
+</body>
+</html>

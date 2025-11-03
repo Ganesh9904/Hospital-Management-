@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityCare Hospital Management System</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <h1 class="logo">CityCare Hospital</h1>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="about/about.html">About</a></li>
+                <li><a href="contact/contact.html">Contact</a></li>
+                <li><a href="patient/login/login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="home" class="hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>Welcome to CityCare Hospital</h1>
+                <p>Your trusted partner in health and wellness. Book appointments with our expert doctors today.</p>
+                <a href="patient/login/login.html" class="cta-btn">Book Appointment</a>
+            </div>
+        </div>
+    </section>
+    <section class="services-preview">
+        <h2>Doctors, Services, Pharmacy</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Doctors</h3>
+                <p>Find specialists by department and schedule.</p>
+                <a href="doctor/doctor.html" class="cta-btn">View Doctors</a>
+            </div>
+            <div class="service-card">
+                <h3>Services</h3>
+                <p>Explore the healthcare services we provide.</p>
+                <a href="services/services.html" class="cta-btn">View Services</a>
+            </div>
+            <div class="service-card">
+                <h3>Pharmacy</h3>
+                <p>Check available medicines and suppliers.</p>
+                <a href="pharmacy/pharmacy.html" class="cta-btn">Visit Pharmacy</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="mission">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <p>At CityCare Hospital, our mission is to provide exceptional healthcare services with compassion, integrity, and excellence. We are committed to improving the health and well-being of our community through innovative medical practices and personalized patient care.</p>
+        </div>
+    </section>
+
+    <section class="why-choose-us">
+        <h2>Why Choose CityCare Hospital?</h2>
+        <div class="reasons-grid">
+            <div class="reason-card">
+                <h3>Expert Medical Team</h3>
+                <p>Our board-certified physicians and specialists provide top-tier care using the latest medical technologies.</p>
+            </div>
+            <div class="reason-card">
+                <h3>State-of-the-Art Facilities</h3>
+                <p>Equipped with advanced medical equipment and comfortable patient rooms for optimal healing.</p>
+            </div>
+            <div class="reason-card">
+                <h3>Patient-Centered Care</h3>
+                <p>We prioritize your comfort and well-being, offering personalized treatment plans and compassionate support.</p>
+            </div>
+            <div class="reason-card">
+                <h3>Comprehensive Services</h3>
+                <p>From preventive care to specialized treatments, we offer a full spectrum of healthcare services.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 CityCare Hospital. All Rights Reserved.</p>
+        <p>Contact: +91 98765 43210 | citycarehospital2025@gmail.com</p>
+        <p>Address: 123 Health Street, Chennai, Tamilnadu 600028</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
