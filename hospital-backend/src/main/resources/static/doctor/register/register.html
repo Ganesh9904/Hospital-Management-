@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Registration - CityCare Hospital</title>
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <h1 class="logo">CityCare Hospital</h1>
+            <ul class="nav-links">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../about/about.html">About</a></li>
+                <li><a href="../../contact/contact.html">Contact</a></li>
+                <li><a href="../login/login.html">Doctor Login</a></li>
+                <li><a href="../../patient/login/login.html">Patient Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="register-section">
+        <div class="container">
+            <div class="register-form">
+                <h1>Doctor Registration</h1>
+                <p>Join our team of healthcare professionals. Create your account below.</p>
+
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="password-container">
+                            <input type="password" id="password" name="password" required placeholder="Create a password">
+                            <span id="togglePassword" class="toggle-password">👁️</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="specialization">Specialization</label>
+                        <input type="text" id="specialization" name="specialization" required placeholder="e.g., Cardiology, Pediatrics">
+                    </div>
+                    <div class="form-group">
+                        <label for="availableDays">Available Days</label>
+                        <input type="text" id="availableDays" name="availableDays" placeholder="e.g., Monday, Wednesday, Friday" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="availableTime">Available Time</label>
+                        <input type="text" id="availableTime" name="availableTime" placeholder="e.g., 9:00 AM - 5:00 PM" required>
+                    </div>
+                    <button type="submit" class="register-btn">Register</button>
+                </form>
+
+                <div class="login-link">
+                    <p>Already have an account? <a href="../login/login.html">Login here</a></p>
+                </div>
+
+                <div id="message"></div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>&copy; 2025 CityCare Hospital. All Rights Reserved.</p>
+        <p>Contact: +91 98765 43210 | citycarehospital2025@gmail.com</p>
+        <p>Address: 123 Health Street, Chennai, Tamilnadu 600028</p>
+    </footer>
+
+    <script src="register.js"></script>
+</body>
+</html>

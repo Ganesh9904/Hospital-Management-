@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard - CityCare Hospital</title>
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="doctor-dashboard.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <h1 class="logo">CityCare Hospital</h1>
+            <ul class="nav-links">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../about/about.html">About</a></li>
+                <li><a href="../../contact/contact.html">Contact</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard-section">
+        <div class="container">
+            <header class="dashboard-header">
+                <h1>Welcome, Dr. <span id="doctorName"></span></h1>
+                <button id="logoutBtn" class="logout-btn">Logout</button>
+            </header>
+
+            <div class="dashboard-content">
+                <h2>Your Appointments</h2>
+
+                <div class="appointments-section">
+                    <h3>Upcoming Appointments</h3>
+                    <div id="upcomingAppointments" class="appointments-list">
+                    </div>
+                </div>
+
+                <div class="appointments-section">
+                    <h3>Previous Appointments</h3>
+                    <div id="previousAppointments" class="appointments-list">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div id="cancelModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Cancel Appointment</h3>
+            <p>Please provide a reason for canceling this appointment:</p>
+            <textarea id="cancelReason" rows="4" placeholder="Enter reason here..."></textarea>
+            <button id="confirmCancel" class="confirm-cancel-btn">Confirm Cancel</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 CityCare Hospital. All Rights Reserved.</p>
+        <p>Contact: +91 98765 43210 | citycarehospital2025@gmail.com</p>
+        <p>Address: 123 Health Street, Chennai, Tamilnadu 600028</p>
+    </footer>
+
+    <script src="doctor-dashboard.js"></script>
+</body>
+</html>

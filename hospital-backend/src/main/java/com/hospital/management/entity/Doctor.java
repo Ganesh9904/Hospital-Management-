@@ -17,18 +17,21 @@ public class Doctor {
 
     private String name;
     private String email;
+    private String password;
     private String specialization;
-    private String availableDays; 
+    private String availableDays;
     private String availableTime;
+    private String resetToken;
 
     @OneToMany(mappedBy = "doctor")
     private List<Appointment> appointments;
 
     public Doctor() {}
 
-    public Doctor(String name, String email, String specialization, String availableDays, String availableTime) {
+    public Doctor(String name, String email, String password, String specialization, String availableDays, String availableTime) {
         this.name = name;
         this.email = email;
+        this.password = password;
         this.specialization = specialization;
         this.availableDays = availableDays;
         this.availableTime = availableTime;
@@ -74,10 +77,24 @@ public class Doctor {
          this.availableTime = availableTime; 
         }
 
-    public List<Appointment> getAppointments() { 
-        return appointments; 
+    public List<Appointment> getAppointments() {
+        return appointments;
     }
     public void setAppointments(List<Appointment> appointments) {
-         this.appointments = appointments; 
+         this.appointments = appointments;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getResetToken() {
+        return resetToken;
+    }
+    public void setResetToken(String resetToken) {
+        this.resetToken = resetToken;
     }
 }

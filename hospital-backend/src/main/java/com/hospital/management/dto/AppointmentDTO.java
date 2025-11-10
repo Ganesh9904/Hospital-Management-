@@ -10,20 +10,24 @@ public class AppointmentDTO {
     private Long patientId;
     private Long doctorId;
     private String doctorName;
+    private String patientName;
     private LocalDate appointmentDate;
     private LocalTime appointmentTime;
     private String reason;
+    private String status;
 
     public AppointmentDTO() {}
 
-    public AppointmentDTO(Long id, Long patientId, Long doctorId, String doctorName, LocalDate appointmentDate, LocalTime appointmentTime, String reason) {
+    public AppointmentDTO(Long id, Long patientId, Long doctorId, String doctorName, LocalDate appointmentDate, LocalTime appointmentTime, String reason, String patientName, String status) {
         this.id = id;
         this.patientId = patientId;
         this.doctorId = doctorId;
         this.doctorName = doctorName;
+        this.patientName = patientName;
         this.appointmentDate = appointmentDate;
         this.appointmentTime = appointmentTime;
         this.reason = reason;
+        this.status = status;
     }
     public Long getId() {
          return id;
@@ -81,10 +85,24 @@ public class AppointmentDTO {
          this.reason = reason;
          }
 
-    public String getDoctorName() { 
-        return doctorName; 
+    public String getDoctorName() {
+        return doctorName;
     }
-    public void setDoctorName(String doctorName) { 
-        this.doctorName = doctorName; 
+    public void setDoctorName(String doctorName) {
+        this.doctorName = doctorName;
+    }
+
+    public String getPatientName() {
+        return patientName;
+    }
+    public void setPatientName(String patientName) {
+        this.patientName = patientName;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

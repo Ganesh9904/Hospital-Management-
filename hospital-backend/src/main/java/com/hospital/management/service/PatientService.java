@@ -31,6 +31,30 @@ public class PatientService {
             return Optional.empty();
         }
     }
+
+    public String generateResetToken(String email) {
+        Optional<Patient> patientOpt = patientRepository.findByEmail(email);
+        if (patientOpt.isPresent()) {
+            Patient patient = patientOpt.get();
+            String token = java.util.UUID.randomUUID().toString();
+            patient.setResetToken(token);
+            patientRepository.save(patient);
+            return token;
+        }
+        return null;
+    }
+
+    public boolean resetPassword(String token, String newPassword) {
+        Optional<Patient> patientOpt = patientRepository.findByResetToken(token);
+        if (patientOpt.isPresent()) {
+            Patient patient = patientOpt.get();
+            patient.setPassword(newPassword);
+            patient.setResetToken(null);
+            patientRepository.save(patient);
+            return true;
+        }
+        return false;
+    }
     public Optional<PatientDTO> getPatientProfile(Long id) {
         return patientRepository.findById(id)
                 .map(this::convertToDTO);

@@ -1,5 +1,5 @@
 document.getElementById('contactForm').addEventListener('submit', async function(event) {
-    event.preventDefault(); // prevent default form submission
+    event.preventDefault();
 
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;

@@ -28,6 +28,7 @@ public class Appointment {
     private LocalDate date;
     private LocalTime time;
     private String reason;
+    private String status; 
 
     public Appointment() {
     }
@@ -39,6 +40,7 @@ public class Appointment {
         this.date = date;
         this.time = time;
         this.reason = reason;
+        this.status = "active";
     }
 
     public Long getId() {
@@ -87,5 +89,13 @@ public class Appointment {
 
     public void setReason(String reason) {
         this.reason = reason;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

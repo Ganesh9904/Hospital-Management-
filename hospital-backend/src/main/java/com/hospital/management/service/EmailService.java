@@ -22,6 +22,11 @@ public class EmailService {
         sendEmail(toDoctor, subject, body);
     }
 
+    public void sendPasswordResetEmail(String to, String subject, String body) {
+        logger.info("Sending password reset email to: {}", to);
+        sendEmail(to, subject, body);
+    }
+
     private void sendEmail(String to, String subject, String body) {
         try {
             SimpleMailMessage message = new SimpleMailMessage();

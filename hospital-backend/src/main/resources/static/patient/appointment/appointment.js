@@ -37,7 +37,7 @@ function bookAppointment() {
     const time = document.getElementById('time').value;
     const reason = document.getElementById('reason').value;
 
-    const patientId = localStorage.getItem('patientId'); //get patient id from localStorage
+    const patientId = localStorage.getItem('patientId'); //get patient id
 
     if (!patientId) {
         alert('Please login first to book an appointment.');

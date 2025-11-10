@@ -53,7 +53,7 @@ function displayUpcomingAppointments(appointments) {
             return false; 
         }
         return false;
-    }).slice(0, 3);
+    }).slice(0, 5);
 
     if (upcoming.length === 0) {
         upcomingContainer.innerHTML = '<p class="no-appointments">No upcoming appointments.</p>';

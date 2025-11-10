@@ -122,8 +122,6 @@
     font-size: 0.9rem;
     color: #666666;
 }
-
-/* Responsive design */
 @media (max-width: 768px) {
     .about-content {
         flex-direction: column;

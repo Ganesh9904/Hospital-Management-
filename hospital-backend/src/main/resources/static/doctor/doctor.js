@@ -37,19 +37,19 @@ function getDoctorImage(doctorName) {
 }
 function displayDoctors(doctors) {
     const grid = document.getElementById('doctor-grid');
-    if (doctors.length === 0) {//back end is not conntected means 
+    if (doctors.length === 0) { 
         grid.innerHTML = '<p style="text-align: center; color: #666;">Loading doctors from database...</p>';
         return;
     }
 
-    doctors.forEach(doctor => {
+    doctors.forEach(doctor => { // specific image of doctor based on name
         const card = document.createElement('div');
         card.className = 'doctor-card';
 
-        const imageSrc = getDoctorImage(doctor.name);   // specific image of doctor based on name
+        const imageSrc = getDoctorImage(doctor.name);   
 
         card.innerHTML = `
-            <img src="${imageSrc}" alt="${doctor.name}" class="doctor-image" onerror="this.src='https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80'">
+            <img src="${imageSrc}" alt="${doctor.name}" class="doctor-image" onerror="this.src='https://www.bing.com/th/id/OIP.9mHnGxjdY7Xb7-y-aq0_qQHaE8?w=248&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2'">
             <div class="doctor-info">
                 <h3>${doctor.name}</h3>
                 <p><strong>Specialization:</strong> ${doctor.specialization || 'General Medicine'}</p>

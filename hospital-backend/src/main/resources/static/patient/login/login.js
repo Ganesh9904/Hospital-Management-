@@ -1,6 +1,19 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     const loginForm = document.getElementById('loginForm');
+    const togglePassword = document.getElementById('togglePassword');
+    const passwordInput = document.getElementById('password');
+
+    // Toggle password visibility
+    togglePassword.addEventListener('click', function() {
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            togglePassword.textContent = '🙈';
+        } else {
+            passwordInput.type = 'password';
+            togglePassword.textContent = '👁️';
+        }
+    });
 
     loginForm.addEventListener('submit', function(e) {
         e.preventDefault();
